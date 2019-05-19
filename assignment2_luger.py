@@ -114,13 +114,13 @@ class Assignment_2:
         :return:
         '''
 
-        hetero_numb = 0 #counter
+        hetero_number = 0 #counter
         with open("chr22_new.vcf") as myVCF:
             vcf_reader = vcf.Reader(myVCF)
             for record in vcf_reader:
-                hetero_numb += record.num_het
+                hetero_number += record.num_het
 
-        print("The number of heterozygous variants is ", hetero_numb)
+        print("The number of heterozygous variants is ", hetero_number)
     #Output: 56370
 
     def merge_chrs_into_one_vcf(self):
